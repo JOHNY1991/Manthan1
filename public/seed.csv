@@ -1,0 +1,101 @@
+Pid,College,Fname,Lname,Email,Phone,Age,Gender,Bcity,Teligible
+1,Lucknow University,Agaraja,Pandey,agarajapandey@gmail.com,9457914422,23,2,Lucknow,1
+2,Lucknow University,Nikhil,Dhawan,dhawannikhil1@gmail.com,7607011897,26,1,Lucknow,1
+3,Lucknow University,Sanskriti,Yadav,sanskritiyadav18@gmail.com,8765163018,23,2,Lucknow,1
+4,Lucknow University,Sarvesh,Prasad,sarveshprasad1988@gmail.com,9936689431,25,1,Lucknow,1
+5,Lucknow University,Deeksha,Gupta,deeksha2406@gmail.com,9473776462,22,2,Lucknow,1
+6,"Indian School of Mines, Dhanbad",Siddharth,Naidu,sidnaidu24@gmail.com,9934677462,21,1,Dhanbad,1
+7,"Indian School of Mines, Dhanbad",Parth,Joshi,sidnaidu24@gmail.com,9934677462,21,1,Dhanbad,1
+8,"Indian School of Mines, Dhanbad",Roop,Narayan,sidnaidu24@gmail.com,9687665812,21,1,Dhanbad,1
+9,"Indian School of Mines, Dhanbad",Dhruv,Kumar,sidnaidu24@gmail.com,9687665812,21,1,Dhanbad,1
+10,"Indian School of Mines, Dhanbad",Abhay,Jain,sidnaidu24@gmail.com,9687664030,21,1,Dhanbad,1
+11,"Gandhi Institute of Technology and Management University (GITAM),Vishakhapatnam",SAYAN,GANGULY,sayan.ganguly@aiesec.net,8978043354,20,1,Visakhapatnam,1
+12,"Gandhi Institute of Technology and Management University (GITAM),Vishakhapatnam",Susanth,Mahapatro,susanth.esquare@gmail.com,9948027013,19,1,Visakhapatnam,1
+13,"Gandhi Institute of Technology and Management University (GITAM),Vishakhapatnam",Shyam,Tenali,coolshyam24@gmail.com,9000130121,18,1,Visakhapatnam,1
+14,"Gandhi Institute of Technology and Management University (GITAM),Vishakhapatnam",Shiv,Prabhat,prabhatshiv93@gmail.com,9704443646,20,1,Visakhapatnam,1
+15,"Gandhi Institute of Technology and Management University (GITAM),Vishakhapatnam",Subod,Adithya,subodadithya@gmail.com,9059006008,19,1,Visakhapatnam,1
+16,"Amity University, Lucknow",vishal,srivastav,vsal_13@rediffmail.com,9621049138,21,1,Lucknow,1
+17,"Amity University, Lucknow",shashank,shubhranshu,shubhranshushashank@gmail.com,9044598060,20,1,Lucknow,1
+18,"Amity University, Lucknow",pankaj kumar,singh,sirfpankaj@gmail.com,9795812796,21,1,Lucknow,1
+19,"Amity University, Lucknow",prashant,bhatt,prashantizrocking@gmail.com,9919595999,20,1,Lucknow,1
+20,"Amity University, Lucknow",pawan,bankoti,pawan.bankoti123@gmail.com,9455841958,20,1,Lucknow,1
+21,"Birla Institute of Technology, Ranchi",SHASHI,KUMAR,wish_gupta@yahoo.co.in,8603222771,23,1,Ranchi,1
+22,"Birla Institute of Technology, Ranchi",PARMITA,DUBEY,officialparmita@gmail.com,8092674630,23,2,Ranchi,1
+23,"Birla Institute of Technology, Ranchi",MEENU,LADIA,meenu.ladia@gmail.com,8298081096,22,2,Ranchi,1
+24,"Birla Institute of Technology, Ranchi",SHRUTI,AKHOURI,funnyshru@yahoo.com,8603209002,24,2,Ranchi,1
+25,"Birla Institute of Technology, Ranchi",CHANDRA PRAKASH,RAI,chandraprakash1789@gmail.om,8252312414,24,1,Ranchi,1
+26,BDCIDC,samrudhi pande,samrudhipande653@gmail.com,samrudhipande653@gmail.com,9860150305,21,2,Nagpur,1
+27,BDCIDC,akshat,deshpande,akshatsd4u@gmail.com,9921554667,23,1,Nagpur,1
+28,BDCIDC,shreyas,joshi,shreyasjoshi1992@gmail.com,7741968405,21,1,Nagpur,1
+29,BDCIDC,sonal,lambat,sonallambat76@gmail.com,7350398469,21,2,Nagpur,1
+30,BDCIDC,anoop,mahalle,anoopmahalle99@gmail.com,7875087852,21,1,Nagpur,1
+31,"Indian School of Business (ISB), Hyderabad",Vikas,Gujral,Vikas_Gujral2014@pgp.isb.edu,8897866800,25,1,Hyderabad,1
+32,"Indian School of Business (ISB), Hyderabad",Bhavna,Choraria,Bhavna_Choraria2014@pgp.isb.edu,8886367857,24,2,Hyderabad,1
+33,"Indian School of Business (ISB), Hyderabad",Sonal,Jain,Sonal_Jain2014@pgp.isb.edu,9000790530,26,2,Hyderabad,1
+34,"Indian School of Business (ISB), Hyderabad",Kunal,Gulati,Kunal_Gulati2014@pgp.isb.edu,8106445660,25,1,Hyderabad,1
+35,"Indian School of Business (ISB), Hyderabad",Piyush,Singh,Piyush_Singh2014@pgp.isb.edu,8886423470,27,1,Hyderabad,1
+36,"Indian Institute of Aeronautical Engineering & Information Technology,Pune",SUMIT,SUMAN,sumit1suman@gmail.com,9011621705,23,1,Pune,1
+37,"Indian Institute of Aeronautical Engineering & Information Technology,Pune",Amit,Sanwal,amitsanwal20@gmail.com,9673370982,21,1,Pune,1
+38,"Indian Institute of Aeronautical Engineering & Information Technology,Pune",Jasvin,Gejera,jasvingejera56@gmail.com,9408779699,20,1,Pune,1
+39,"Indian Institute of Aeronautical Engineering & Information Technology,Pune",sachin,dev,sachindevaero96@gmail.com,98351620681,21,1,Pune,1
+40,"Indian Institute of Aeronautical Engineering & Information Technology,Pune",PUSHPAM,BHARTI,pushpambharti2012@gmail.com,9822198615,27,2,Pune,1
+41,Koneru Lakshmaiha University,venkata aravinda swamy,gandham,sreee.aravind9@gmail.com,7382482040,19,1,vijayawada,1
+42,Koneru Lakshmaiha University,tejav,jasthy,tejav.jasty@gmail.com,8099911569,20,1,vijayawada,1
+43,Koneru Lakshmaiha University,prudhvi,shakamuri,pruthvi.sai1@facebook.com,9160488181,19,1,vijayawada,1
+44,Koneru Lakshmaiha University,poorna teja,reddy,ptreddy@gmail.com,9014543328,19,1,vijayawada,1
+45,Koneru Lakshmaiha University,bhanuteja,bhale,bhalebhanuteja@gmail.com,9502190025,19,1,vijayawada,1
+46,"Delhi technological university, Delhi",Deepali,Kansal,deepali_kansal30@hotmail.com,9811603060,20,2,Delhi,0
+47,"Delhi technological university, Delhi",Joginder,Singh,james.manu94@gmail.com,7503707765,19,1,Delhi,0
+48,"Delhi technological university, Delhi",Vikrant,Yadav,viks.93@gmail.com,9013339343,20,1,Delhi,0
+49,"Delhi technological university, Delhi",Shashank,Gupta,shashankgupta9654@gmail.com,9654373997,20,1,Delhi,0
+50,"Delhi technological university, Delhi",Vibhav,Jain,vibhav.jain1@gmail.com,9899359475,20,1,Delhi,0
+51,"Birla Institute of Technology and Science (BITS), Pilani",Appurv,Gupta,guptaappurv@gmail.com,8600484475,20,1,Goa,1
+52,"Birla Institute of Technology and Science (BITS), Pilani",Giriraj,-,grj.redoctober@gmail.com,9637133641,20,1,Goa,1
+53,"Birla Institute of Technology and Science (BITS), Pilani",Jatin,Sapra,jatinsapra2008@gmail.com,9503375847,20,1,Goa,1
+54,"Birla Institute of Technology and Science (BITS), Pilani",Meet,G. Kalola,meetgkalolamkg@gmail.com,9604436536,20,1,Goa,1
+55,"Birla Institute of Technology and Science (BITS), Pilani",Pravin,Joshi,pravinjoshi95@gmail.com,8806659245,20,1,Goa,1
+56,"Indian Institute of Technology, Madras",Prasad,Maddipatla,prasad3maddipatla@gmail.com,9940197419,20,1,Chennai,1
+57,"Indian Institute of Technology, Madras",Shravan,Banoth,shravan9392@gmail.com,7200495705,20,1,Chennai,1
+58,"Indian Institute of Technology, Madras",Sathvik,Gollamandala,g.sathvik7@gmail.com,8939678021,20,1,Chennai,1
+59,"Indian Institute of Technology, Madras",Harish Kumar,Obili,harishobili@gmail.com,7200490772,21,1,Chennai,1
+60,"Indian Institute of Technology, Madras",Rajasekhar,V,v.rajasekhar225@gmail.com,7200490771,21,1,Chennai,1
+61,"Indian Institute of Technology, Madras",Yaswanth,Tadikonda,yashu.tadikonda@gmail.com,9498098072,18,1,Chennai,1
+62,"Indian Institute of Technology, Madras",Varun Teja,Salady,saladyvarunteja@gmail.com,9789022748,19,1,Chennai,1
+63,"Indian Institute of Technology, Madras",Naveen Raaj,K P,naveenraaj44@gmail.com,9486029364,19,1,Chennai,1
+64,"Indian Institute of Technology, Madras",Rajath Nandan,Kalava,kalavarajath@gmail.com,9445812031,19,1,Chennai,1
+65,"Indian Institute of Technology, Madras",Raghavi,Kodati,raghavi.kodati@gmail.com,9500065837,19,2,Chennai,1
+66,"Sparta Institute of Technology & Management, Bhopal",ROHIT TIWARI,rohittiwari_91@ibibo.com,rohittiwari_91@ibibo.com,8962338780,21,1,Bhopal,1
+67,"Sparta Institute of Technology & Management, Bhopal",RAHUL,TIWARI,masterrahul08@gmail.com,9165632303,22,1,Bhopal,1
+68,"Sparta Institute of Technology & Management, Bhopal",RISHI KUMAR,NAMDEO,rishinamdeo9@gmail.com,8871573968,21,1,Bhopal,1
+69,"Sparta Institute of Technology & Management, Bhopal",SHARUKH KHAN,MANSOORI,Skhan5457@gmail.com,9039585531,21,1,Bhopal,1
+70,"Sparta Institute of Technology & Management, Bhopal",VIJENDRA,BATHAM,vbatham942@gmail.com,7389202024,21,1,Bhopal,1
+71,"Government Law College, Mumbai",Rupal,Shah,shahrupal91@gmail.com,8976493021,22,2,Mumbai,1
+72,"Government Law College, Mumbai",Srishti,Rani,srishti5491@gmail.com,9004858499,22,2,Mumbai,1
+73,"Government Law College, Mumbai",Nandita,Hemmady,nanditah91@gmail.com,9920062436,21,2,Mumbai,1
+74,"Government Law College, Mumbai",Arzin,Ansari,arzinans@gmail.com,9930419945,21,2,Mumbai,1
+75,"Government Law College, Mumbai",Bhrigu,Sharma,bhriguglc@gmail.com,8898862737,21,1,Mumbai,1
+76,"Punjab Govt. Dental College & Hospital, Amritsar",vishnu,garg,v.garg94@gmail.com,9417895329,19,1,Amritsar,1
+77,"Punjab Govt. Dental College & Hospital, Amritsar",etashu,chhabra,etashuc@yahoo.com,7307910248,19,2,Amritsar,1
+78,"Punjab Govt. Dental College & Hospital, Amritsar",mubashir,ahmad,khanqdn855@gmail.com,7696696709,20,1,Amritsar,1
+79,"Punjab Govt. Dental College & Hospital, Amritsar",guriqbal,singh,singhguriqbal1993@gmail.com,8146200756,20,1,Amritsar,1
+80,"Punjab Govt. Dental College & Hospital, Amritsar",anjali,kumari,n.anjaliangel@gmail.com,7837565717,19,2,Amritsar,1
+81,"MVGR College of Engineering, Vizianagaram",ammireddy,chirla,ammireddychirla@yahoo.com,9502102118,18,1,Srikakulam,1
+82,"MVGR College of Engineering, Vizianagaram",Sunny Raj,Doddi,thisizsunnyraj@gmail.com,9985086997,18,1,Srikakulam,1
+83,"MVGR College of Engineering, Vizianagaram",Jayram Sekhar,s,jairamsekhar.s@gmail.com,9948894042,18,1,Srikakulam,1
+84,"MVGR College of Engineering, Vizianagaram",lakshmi deepak,laveti,lakshmideepak.laveti@gmail.com,9704913939,18,1,Srikakulam,1
+85,"MVGR College of Engineering, Vizianagaram",prasanth,sambarika,prasanth.sambarika@gmail.com,9494465273,18,1,Srikakulam,1
+86,"Indian School of Mines, Dhanbad",Shubham,Kumar,shubhamkumar.sk03@gmail.com,8804022964,18,1,DHANBAD,1
+87,"Indian School of Mines, Dhanbad",Shishir,Singh,shishirkr911@gmail.com,7631134711,19,1,DHANBAD,1
+88,"Indian School of Mines, Dhanbad",Amit,Giri,amit.giri248@gmail.com,8051074407,19,1,DHANBAD,1
+89,"Indian School of Mines, Dhanbad",Deepak,Kumar,patwa.deepak@gmail.com,8507115565,19,1,DHANBAD,1
+90,"Indian School of Mines, Dhanbad",Ashish,Upadhyay,upadhyayashish100@gmail.com,8935896236,19,1,DHANBAD,1
+91,"Lakshmi Narain College of Technology & Science, Bhopal",rajat,bansal,rajat.25@hotmail.com,9806452737,21,1,Bhopal,1
+92,"Lakshmi Narain College of Technology & Science, Bhopal",rupin,jain,rupjain27@gmail.com,7566270593,21,1,Bhopal,1
+93,"Lakshmi Narain College of Technology & Science, Bhopal",swetank,khare,knatews12@gmail.com,7898894990,21,1,Bhopal,1
+94,"Lakshmi Narain College of Technology & Science, Bhopal",deependra pratap,singh,deependra7878@gmail.com,9981777730,22,1,Bhopal,1
+95,"Lakshmi Narain College of Technology & Science, Bhopal",pradeep,yadav,shauyz@gmail.com,7869764266,21,1,Bhopal,1
+96,"Osmania University College, Hyderabad",praveen,kumar,praveenbujji112@gmail.com,8885118871,21,1,Hyderabad,1
+97,"Osmania University College, Hyderabad",anji,mudhiraj,anjimudhiraj96@gmail.com,8885226824,21,1,Hyderabad,1
+98,"Osmania University College, Hyderabad",chiru,subbu,chirusubbu44@gmail.com,8297460405,20,1,Hyderabad,1
+99,"Osmania University College, Hyderabad",prashanth,nani,prashanth.nani112@gmail.com,8885118984,19,1,Hyderabad,1
+100,"Osmania University College, Hyderabad",rammohan,reddy,rammohanreddy777@gmail.com,9985878411,27,1,Hyderabad,1

@@ -1,0 +1,18 @@
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name),:html => {:class => 'form-signin'}) do |f| %>
+    <div xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"><%= f.label :email %>
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div><%= f.label :password %>
+  <%= f.password_field :password %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><label class="checkbox"><%= f.check_box :remember_me %> <%= f.label :remember_me %></label></div>
+  <% end -%>
+
+  <div><%= f.submit "Sign in", :class => 'btn-primary btn-large'%> </br></br>
+    <%= render "devise/shared/links" %>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pid:</b>
+  <%= @participant.pid %>
+</p>
+
+<p>
+  <b>College:</b>
+  <%= @participant.college %>
+</p>
+
+<p>
+  <b>Fname:</b>
+  <%= @participant.fname %>
+</p>
+
+<p>
+  <b>Lname:</b>
+  <%= @participant.lname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @participant.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @participant.phone %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @participant.age %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @participant.gender %>
+</p>
+
+<p>
+  <b>Bcity:</b>
+  <%= @participant.bcity %>
+</p>
+
+<p>
+  <b>Teligible:</b>
+  <%= @participant.teligible %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>
