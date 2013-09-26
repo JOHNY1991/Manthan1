@@ -3,7 +3,7 @@ Manthan::Application.routes.draw do
   devise_for :admins
 
   resources :admins
-
+  resources :teams
 
   resources :participants do
     collection do
