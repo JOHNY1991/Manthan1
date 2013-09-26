@@ -1,5 +1,24 @@
-<p id="notice"><%= notice %></p>
+<table class="table table-bordered ">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Participant ID</th>
+    <th>College</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @team.participants.each do |participant| %>
+      <tr>
+        <th><%= participant.fname %></th>
+        <th><%= participant.lname %></th>
+        <th><%= participant.pid %></th>
+        <th><%= participant.college %></th>
+      </tr>
+  <% end %>
+  </tbody>
 
+</table>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

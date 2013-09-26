@@ -80,4 +80,19 @@ class TeamsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def update_receiver
+
+    @team = Team.find_by_team_id(params[:id])
+
+    if params[:receiver_name] == "" then
+      render :json => {:id => params[:id], :status => 'false', :message => 'Please enter the Receiver Name'}
+         else
+      @team.update_attribute(:receiver,params[:receiver_name])
+      render :json => {:id => params[:id], :status => 'true', :message => 'Accepted', :receiver => params[:receiver_name]}
+
+    end
+
+  end
 end

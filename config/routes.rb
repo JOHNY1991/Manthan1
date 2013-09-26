@@ -3,11 +3,16 @@ Manthan::Application.routes.draw do
   devise_for :admins
 
   resources :admins
-  resources :teams
+
+  resources :teams do
+    collection do
+      post 'update_receiver'
+    end
+  end
 
   resources :participants do
     collection do
-      get 'participants/enter'
+      get 'enter'
     end
   end
 

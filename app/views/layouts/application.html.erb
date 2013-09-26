@@ -53,9 +53,9 @@
   </div>
 </div>
 <div class="container-fluid">
-  <% if notice %>
-      <p id="notice"><%=notice %></p>
-  <% end %>
+      <div class="alert alert-error" id="notice">
+        <%=notice.blank? ? notice : "" %>
+      </div>
 <%= yield %>
 </div>
 </body>

@@ -86,7 +86,7 @@ class ParticipantsController < ApplicationController
 
 
 def enter
-  @participant = Participant.find(params[:part_id])
+  @participant = Participant.find_by_pid(params[:part_id])
 
     if   @participant.entry? then
       render :json => {:id => params[:part_id], :status => 'true', :message => 'Already Registered'}
