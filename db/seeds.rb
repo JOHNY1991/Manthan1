@@ -8,6 +8,6 @@
 require 'csv'
 
 CSV.foreach(Rails.root.to_s+"/public/seed.csv",:headers=> :first_row) do |row|
-  participant=Participant.create(:pid => row[0],:college =>row[1],:fname=>row[2],:lname=>row[3],:email => row[4],:phone =>row[5],:age=>row[6],:gender=>row[7],:bcity => row[8],:teligible =>row[9])
+  participant=Participant.create(:pid => row[0],:team_id => row[1],:college =>row[2],:fname=>row[3],:lname=>row[4],:email => row[5],:phone =>row[6],:gender=>row[7],:bcity => row[8])
   puts participant.inspect
 end
