@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926155129) do
+ActiveRecord::Schema.define(:version => 20130928140542) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -56,6 +56,20 @@ ActiveRecord::Schema.define(:version => 20130926155129) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "receiver"
+  end
+
+  create_table "trips", :force => true do |t|
+    t.integer  "pid"
+    t.string   "f_remb_eligible"
+    t.string   "f_reason"
+    t.integer  "f_max_remb"
+    t.integer  "f_remb_amt"
+    t.string   "r_remb_eligible"
+    t.string   "r_reason"
+    t.integer  "r_max_remb"
+    t.integer  "r_remb_amt"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

@@ -1,4 +1,8 @@
 Manthan::Application.routes.draw do
+
+  resources :trips
+
+
   root to: 'participants#index'
   devise_for :admins
 
