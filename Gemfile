@@ -26,6 +26,9 @@ gem 'jquery-ui-rails'
 gem 'will_paginate'
 gem 'devise'
 gem 'rubber'
+gem 'mysql2'
+gem  'mysql', '2.9.1'
+gem 'activerecord-mysql-adapter'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -41,3 +44,4 @@ gem 'rubber'
 
 # To use debugger
 # gem 'debugger'
+gem 'therubyracer'

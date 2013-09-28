@@ -7,12 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
 
-CSV.foreach(Rails.root.to_s+"/public/seed.csv",:headers=> :first_row) do |row|
-  participant=Participant.create(:pid => row[0],:team_id => row[1],:college =>row[2],:fname=>row[3],:lname=>row[4],:email => row[5],:phone =>row[6],:gender=>row[7],:bcity => row[8],:teligible => row[9])
-  puts participant.inspect
-end
-
-#CSV.foreach(Rails.root.to_s+"/public/team_seed.csv",:headers=> :first_row) do |row|
-#  team=Team.create(:team_id => row[0],:name =>row[2],:college=>row[1])
-#  puts team.inspect
+#CSV.foreach(Rails.root.to_s+"/public/seed.csv",:headers=> :first_row) do |row|
+#  participant=Participant.create(:pid => row[0],:team_id => row[1],:college =>row[2],:fname=>row[3],:lname=>row[4],:email => row[5],:phone =>row[6],:gender=>row[7],:bcity => row[8],:teligible => row[9])
+#  puts participant.inspect
 #end
+
+CSV.foreach(Rails.root.to_s+"/public/team_seed.csv",:headers=> :first_row) do |row|
+  team=Team.create(:team_id => row[0],:name =>row[2],:college=>row[1])
+  puts team.inspect
+end
