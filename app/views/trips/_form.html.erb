@@ -1,0 +1,53 @@
+<%= form_for(@trip) do |f| %>
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+
+      <ul>
+      <% @trip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pid %><br />
+    <%= f.number_field :pid %>
+  </div>
+  <div class="field">
+    <%= f.label :f_remb_eligible %><br />
+    <%= f.text_field :f_remb_eligible %>
+  </div>
+  <div class="field">
+    <%= f.label :f_reason %><br />
+    <%= f.text_field :f_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :f_max_remb %><br />
+    <%= f.number_field :f_max_remb %>
+  </div>
+  <div class="field">
+    <%= f.label :f_remb_amt %><br />
+    <%= f.number_field :f_remb_amt %>
+  </div>
+  <div class="field">
+    <%= f.label :r_remb_eligible %><br />
+    <%= f.text_field :r_remb_eligible %>
+  </div>
+  <div class="field">
+    <%= f.label :r_reason %><br />
+    <%= f.text_field :r_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :r_max_remb %><br />
+    <%= f.number_field :r_max_remb %>
+  </div>
+  <div class="field">
+    <%= f.label :r_remb_amt %><br />
+    <%= f.number_field :r_remb_amt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

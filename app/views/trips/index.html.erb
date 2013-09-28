@@ -1,0 +1,39 @@
+<h1>Listing trips</h1>
+
+<table>
+  <tr>
+    <th>Pid</th>
+    <th>F remb eligible</th>
+    <th>F reason</th>
+    <th>F max remb</th>
+    <th>F remb amt</th>
+    <th>R remb eligible</th>
+    <th>R reason</th>
+    <th>R max remb</th>
+    <th>R remb amt</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trips.each do |trip| %>
+  <tr>
+    <td><%= trip.pid %></td>
+    <td><%= trip.f_remb_eligible %></td>
+    <td><%= trip.f_reason %></td>
+    <td><%= trip.f_max_remb %></td>
+    <td><%= trip.f_remb_amt %></td>
+    <td><%= trip.r_remb_eligible %></td>
+    <td><%= trip.r_reason %></td>
+    <td><%= trip.r_max_remb %></td>
+    <td><%= trip.r_remb_amt %></td>
+    <td><%= link_to 'Show', trip %></td>
+    <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
+    <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trip', new_trip_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pid: 1
+  f_remb_eligible: MyString
+  f_reason: MyString
+  f_max_remb: 1
+  f_remb_amt: 1
+  r_remb_eligible: MyString
+  r_reason: MyString
+  r_max_remb: 1
+  r_remb_amt: 1
+
+two:
+  pid: 1
+  f_remb_eligible: MyString
+  f_reason: MyString
+  f_max_remb: 1
+  f_remb_amt: 1
+  r_remb_eligible: MyString
+  r_reason: MyString
+  r_max_remb: 1
+  r_remb_amt: 1

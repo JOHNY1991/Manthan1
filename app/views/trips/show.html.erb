@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pid:</b>
+  <%= @trip.pid %>
+</p>
+
+<p>
+  <b>F remb eligible:</b>
+  <%= @trip.f_remb_eligible %>
+</p>
+
+<p>
+  <b>F reason:</b>
+  <%= @trip.f_reason %>
+</p>
+
+<p>
+  <b>F max remb:</b>
+  <%= @trip.f_max_remb %>
+</p>
+
+<p>
+  <b>F remb amt:</b>
+  <%= @trip.f_remb_amt %>
+</p>
+
+<p>
+  <b>R remb eligible:</b>
+  <%= @trip.r_remb_eligible %>
+</p>
+
+<p>
+  <b>R reason:</b>
+  <%= @trip.r_reason %>
+</p>
+
+<p>
+  <b>R max remb:</b>
+  <%= @trip.r_max_remb %>
+</p>
+
+<p>
+  <b>R remb amt:</b>
+  <%= @trip.r_remb_amt %>
+</p>
+
+
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %>
