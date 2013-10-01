@@ -1,7 +1,7 @@
 <script>
 
     function mysum(id){
-       $('#calc_'+id).html(parseInt($('#r_'+id).val())+ parseInt($('#f_'+id).val()))
+       $('#calc_'+id).html(parseInt($('#r_'+id).val()==''?'0':$('#r_'+id).val())+ parseInt($('#f_'+id).val()==''?'0': $('#f_'+id).val()))
     }
 
 
@@ -127,7 +127,13 @@
               <div class="field"><input id="r_<%= trip.id %>" type="text" style="width:40px; " onchange="mysum(<%= trip.id%>)"></div>
             </td>
         <% end %>
-        <td><div id="calc_<%= trip.id %>"></div></td>
+        <td><div id="calc_<%= trip.id %>">
+          <% if !trip.r_remb_amt.blank? and !trip.f_remb_amt.blank? then %>
+              <%=trip.r_remb_amt.to_i + trip.f_remb_amt.to_i	  %>
+          <% else %>
+
+          <% end %>
+        </div></td>
         <% if !trip.r_remb_amt.blank? and !trip.f_remb_amt.blank? then %>
             <td>
               <div class="action"><p>Reimbursed </p> <%= link_to 'Edit', edit_trip_path(trip) %></div>

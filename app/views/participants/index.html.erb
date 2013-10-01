@@ -1,4 +1,17 @@
 <script>
+    function dialogue(){
+        $( "#dialog-message" ).dialog({
+            modal: true,
+            height: 150,
+            width: 300,
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+    }
+
     $(document).ready(function () {
         $('#participants').dataTable({
         });
@@ -6,6 +19,10 @@
             $('#' + 'accept_' + data['id']).html(data['message']);
             if (data['status'] == 'true') {
                 $('#' + 'accept_' + data['id']).css('background-color', "#31973d");
+                if(data['eligibility'] == 'true'){
+                $("#dialog-message").html('Eligible for Reimbursement');
+                dialogue();
+                }
             } else {
                 $('#' + 'accept_' + data['id']).css('background-color', "#ea4141");
             }
@@ -66,6 +83,7 @@
   <% end %>
   </tbody>
 </table>
+<div id="dialog-message" class=""></div>
 
 <br/>
 

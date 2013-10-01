@@ -87,12 +87,14 @@ class ParticipantsController < ApplicationController
 
   def enter
     @participant = Participant.find_by_pid(params[:part_id])
+    @eligibility = @participant.trip.f_remb_eligible == 'Eligible' && @participant.trip.r_remb_eligible == 'Eligible'
 
     if   @participant.entry? then
       render :json => {:id => params[:part_id], :status => 'false', :message => 'Already Registered', :color => 'red'}
     else
       @participant.update_attribute(:entry, true)
-      render :json => {:id => params[:part_id], :status => 'true', :message => 'Accepted', :color => 'green'}
+      render :json => {:id => params[:part_id], :status => 'true', :message => 'Accepted', :color => 'green', :eligibility => "#{@eligibility}"}
+
     end
 
   end

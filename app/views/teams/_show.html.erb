@@ -1,0 +1,24 @@
+<table class="table table-condensed">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Participant ID</th>
+    <th>College</th>
+    <th>Certificate Eligibility</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @team.participants.each do |participant| %>
+  <%elig = Array.new ["Not Eligible", "Eligible"]	  %>
+      <tr>
+        <th><%= participant.fname %></th>
+        <th><%= participant.lname %></th>
+        <th><%= participant.pid %></th>
+        <th><%= participant.college %></th>
+        <th><%= elig[participant.teligible] %></th>
+      </tr>
+  <% end %>
+  </tbody>
+
+</table>

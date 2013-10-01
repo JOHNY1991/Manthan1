@@ -1,4 +1,36 @@
 <script>
+    function dialogue(){
+        $( "#dialog-message" ).dialog({
+            modal: true,
+            height: 500,
+            width: 700,
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+    }
+
+    function show_on_click(id) {
+
+        $.ajax({
+            type:"GET",
+            url:"<%=teams_url%>/"+id,
+            data:{id:id },
+            success:function (data, textStatus) {
+//                if(data['status'] == 'true'){
+//                       alert("hello");
+                $("#dialog-message").html(data);
+                dialogue();
+//                }else
+//                {$("#notice").html(data['message']);
+//                }
+            },
+            dataType:'html'
+        });
+        return false;
+    }
 
     function on_submit_click(id) {
 
@@ -11,7 +43,9 @@
                     $("#" + data['id']).parent().html(data['message']);
                     $("#input_"+data['id']).parent().html(data['receiver']);
                 }else
-                {$("#notice").html(data['message']);
+                {
+                    $("#notice").html(data['message']);
+                    $("#input_"+data['id']).parent().html(data['receiver']);
                 }
             },
             dataType:'json'
@@ -44,11 +78,11 @@
         <td><%= team.college %></td>
         <% if team.receiver.blank? then %>
             <td>
-              <div class="field"><input id="input_<%= team.id %>" type="text"></div>
+              <div class="field"><input id="input_<%= team.team_id %>" type="text"></div>
             </td>
             <td>
               <div class="actions">
-                <input name="id" id="<%= team.id %>" receiver="" type="submit" value="Submit" onclick="on_submit_click(<%= team.id%>);"></div>
+                <input name="id" id="<%= team.team_id %>" receiver="" type="submit" value="Submit" onclick="on_submit_click(<%= team.team_id%>);"></div>
             </td>
         <% else %>
             <td>
@@ -61,7 +95,7 @@
             </td>
 
         <% end %>
-        <td><%= link_to 'Show', team %></td>
+        <td><a  href="#"  id ="dialog_<%=team.team_id%>" onclick = "show_on_click(<%= team.team_id %>);">Show</a></td>
 
       </tr>
   <% end %>
@@ -69,5 +103,5 @@
 
 
 <br/>
-
+<div id="dialog-message" class=""></div>
 <%= link_to 'New Team', new_team_path %>

@@ -18,10 +18,11 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @team }
-    end
+    render :partial => 'teams/show'
+    #respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.json { render json: @team }
+    #end
   end
 
   # GET /teams/new
@@ -91,8 +92,8 @@ class TeamsController < ApplicationController
 
     if params[:receiver_name] == "" then
       render :json => {:id => params[:id], :status => 'false', :message => 'Please enter the Receiver Name'}
-    elsif @team.receiver.blank? then
-      render :json => {:id => params[:id], :status => 'false', :message => 'Already distributed'}
+    elsif !@team.receiver.blank? then
+      render :json => {:id => params[:id], :status => 'false', :message => 'Already distributed', :receiver => @team.receiver}
     else
       @team.update_attribute(:receiver,params[:receiver_name])
       render :json => {:id => params[:id], :status => 'true', :message => 'Accepted', :receiver => params[:receiver_name]}
