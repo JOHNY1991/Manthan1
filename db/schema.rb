@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928140542) do
+ActiveRecord::Schema.define(:version => 20131001171501) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130928140542) do
     t.datetime "updated_at", :null => false
     t.boolean  "entry"
     t.integer  "team_id"
+    t.string   "frisk"
   end
 
   create_table "teams", :id => false, :force => true do |t|
@@ -68,8 +69,12 @@ ActiveRecord::Schema.define(:version => 20130928140542) do
     t.string   "r_reason"
     t.integer  "r_max_remb"
     t.integer  "r_remb_amt"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "attending_status"
+    t.string   "f_ticket"
+    t.string   "r_ticket"
+    t.string   "hotel"
   end
 
 end

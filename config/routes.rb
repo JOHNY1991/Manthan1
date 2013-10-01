@@ -1,6 +1,10 @@
 Manthan::Application.routes.draw do
 
-  resources :trips
+  resources :trips do
+    collection do
+      post 'reimburse'
+    end
+  end
 
 
   root to: 'participants#index'
@@ -14,9 +18,12 @@ Manthan::Application.routes.draw do
     end
   end
 
+  get 'participants/frisking'
+
   resources :participants do
     collection do
       get 'enter'
+      get 'frisk'
     end
   end
 

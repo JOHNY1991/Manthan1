@@ -85,16 +85,38 @@ class ParticipantsController < ApplicationController
   end
 
 
-def enter
-  @participant = Participant.find_by_pid(params[:part_id])
+  def enter
+    @participant = Participant.find_by_pid(params[:part_id])
 
     if   @participant.entry? then
-      render :json => {:id => params[:part_id], :status => 'true', :message => 'Already Registered'}
+      render :json => {:id => params[:part_id], :status => 'false', :message => 'Already Registered', :color => 'red'}
     else
       @participant.update_attribute(:entry, true)
-      render :json => {:id => params[:part_id], :status => 'true', :message => 'Accepted'}
+      render :json => {:id => params[:part_id], :status => 'true', :message => 'Accepted', :color => 'green'}
     end
 
-end
+  end
+
+  def frisking
+    @participants = Participant.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @participants }
+    end
+
+  end
+
+  def frisk
+    @participant = Participant.find_by_pid(params[:part_id])
+
+    if   @participant.frisk? then
+      render :json => {:id => params[:part_id], :status => 'false', :message => 'Already Cleared', :color => 'red'}
+    else
+      @participant.update_attribute(:frisk, true)
+      render :json => {:id => params[:part_id], :status => 'true', :message => 'Cleared', :color => 'green'}
+    end
+
+  end
 
 end

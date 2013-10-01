@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<div class="">
+
+
+ <p>
+  <b>Pid:</b>
+  <%= @trip.pid %>
+</p>
+
+<!--<p>-->
+  <!--<b>F remb eligible:</b>-->
+  <!--<%= @trip.f_remb_eligible %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<b>F reason:</b>-->
+  <!--<%= @trip.f_reason %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<b>F max remb:</b>-->
+  <!--<%= @trip.f_max_remb %>-->
+<!--</p>-->
+
+<p>
+  <b>Forward Reimbursed Amount</b>
+  <%= @trip.f_remb_amt %>
+</p>
+
+<!--<p>-->
+  <!--<b>R remb eligible:</b>-->
+  <!--<%= @trip.r_remb_eligible %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<b>R reason:</b>-->
+  <!--<%= @trip.r_reason %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<b>R max remb:</b>-->
+  <!--<%= @trip.r_max_remb %>-->
+<!--</p>-->
+
+<p>
+  <b>Return Reimbursed Amount</b>
+  <%= @trip.r_remb_amt %>
+</p>
+
+  <p>
+    <b>Team Name</b>
+    <%= @trip.participant.team.name %>
+  </p>
+  <p>
+    <b>College</b>
+    <%= @trip.participant.college %>
+  </p>
+  <p>
+    <b>Attending</b>
+    <%= @trip.attending_status %>
+  </p>
+
+  <p>
+    <b>Forward Ticket Status</b>
+    <%= @trip.f_ticket %>
+  </p>
+
+  <p>
+    <b>Reverse Ticket Status</b>
+    <%= @trip.r_ticket %>
+  </p>
+</div>

@@ -57,10 +57,10 @@
         <% else %>
             <td><%= participant.trip.attending_status %></td>
         <% end %>
-        <% if participant.entry? then %>
+        <% if participant.frisk? then %>
             <td>Already Registered</td>
         <% else %>
-            <td id="accept_<%= participant.pid %>"><%= link_to 'Accept', {:action => 'enter', :part_id => participant.pid}, :remote => TRUE, :disable_with => 'Please wait...', :'data-update-target' => 'update-container' %></td>
+            <td id="accept_<%= participant.pid %>"><%= link_to 'Clear', {:action => 'frisk', :part_id => participant.pid}, :remote => TRUE, :disable_with => 'Please wait...', :'data-update-target' => 'update-container' %></td>
         <% end %>
       </tr>
   <% end %>

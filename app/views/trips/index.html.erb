@@ -1,39 +1,149 @@
-<h1>Listing trips</h1>
+<script>
 
-<table>
+    function mysum(id){
+       $('#calc_'+id).html(parseInt($('#r_'+id).val())+ parseInt($('#f_'+id).val()))
+    }
+
+
+    function dialogue(){
+        $( "#dialog-message" ).dialog({
+            modal: true,
+            height: 450,
+            width: 350,
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+    }
+
+
+    function on_submit_click(id) {
+
+        $.ajax({
+            type:"POST",
+            url:"<%=reimburse_trips_url%>",
+            data:{f_amt:$("#f_" + id.toString()).val(),r_amt:$("#r_" + id.toString()).val(), id:id },
+            success:function (data, textStatus) {
+                if(data['status'] == 'true'){
+                    var elem = $("#" + data['id']).parent()
+                    $("#" + data['id']).parent().html('<p>' + data['message'] + " </p><a target='_blank' href='/trips/"+data['id']+ "/edit'>Edit</a>");
+                    elem.css('background-color', "#31973d");
+                    $("#f_"+data['id']).parent().html(data['f_amt']);
+                    $("#r_"+data['id']).parent().html(data['r_amt']);
+                }else if(data['status'] == 'reimbursed'){
+                    var elem = $("#" + data['id']).parent()
+                    $("#" + data['id']).parent().html('<p>' + data['message'] + " </p><a target='_blank' href='/trips/"+data['id']+ "/edit'>Edit</a>");
+                    elem.css('background-color', "#ea4141");
+                $("#f_"+data['id']).parent().html(data['f_amt']);
+                $("#r_"+data['id']).parent().html(data['r_amt']);
+                    $("#notice").html(data['message']);
+                }
+                else{$("#notice").html(data['message']);
+                }
+            },
+            dataType:'json'
+        });
+        return false;
+    }
+
+    function show_on_click(id) {
+
+        $.ajax({
+            type:"GET",
+            url:"<%=trips_url%>/"+id,
+            data:{id:id },
+            success:function (data, textStatus) {
+//                if(data['status'] == 'true'){
+//                       alert("hello");
+                    $("#dialog-message").html(data);
+                dialogue();
+//                }else
+//                {$("#notice").html(data['message']);
+//                }
+            },
+            dataType:'html'
+        });
+        return false;
+    }
+
+    $(document).ready(function () {
+        $('#trips').dataTable({
+        });
+
+
+    });
+</script>
+
+<table id="trips" class="table table-bordered table-striped">
+  <thead>
   <tr>
     <th>Pid</th>
-    <th>F remb eligible</th>
-    <th>F reason</th>
-    <th>F max remb</th>
-    <th>F remb amt</th>
-    <th>R remb eligible</th>
-    <th>R reason</th>
-    <th>R max remb</th>
-    <th>R remb amt</th>
+    <th>Name</th>
+    <th>Team Name</th>
+    <th>Boarding City</th>
+    <th>Forward eligibility</th>
+    <th>Forward Reason</th>
+    <th>Forward Max Amount</th>
+    <th>Forward Reimbursed Amount</th>
+    <th>Return eligibility</th>
+    <th>Return Reason</th>
+    <th>Return Max Amount</th>
+    <th>Return Reimbursed Amount</th>
+    <th>Total</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <th>Details</th>
   </tr>
+  </thead>
+  <tbody>
+  <% @trips.each do |trip| %>
+      <tr>
+        <td><%= trip.pid %></td>
+        <td><%= trip.participant.fname.to_s + " " + trip.participant.lname.to_s %></td>
+        <td><%= trip.participant.team.name %></td>
+        <td><%= trip.participant.bcity %></td>
+        <td><%= trip.f_remb_eligible %></td>
+        <td><%= trip.f_reason %></td>
+        <td><%= trip.f_max_remb %></td>
+        <% if !trip.f_remb_amt.blank? then %>
+            <td>
+              <%= trip.f_remb_amt %>
+            </td>
+        <% else %>
+            <td>
+              <div class="field"><input id="f_<%= trip.id %>" type="text" style="width:40px; " onchange="mysum(<%= trip.id%>)"></div>
+            </td>
+        <% end %>
+        <td><%= trip.r_remb_eligible %></td>
+        <td><%= trip.r_reason %></td>
+        <td><%= trip.r_max_remb %></td>
+        <% if !trip.r_remb_amt.blank? then %>
+            <td>
+              <%= trip.r_remb_amt %>
+            </td>
+        <% else %>
+            <td>
+              <div class="field"><input id="r_<%= trip.id %>" type="text" style="width:40px; " onchange="mysum(<%= trip.id%>)"></div>
+            </td>
+        <% end %>
+        <td><div id="calc_<%= trip.id %>"></div></td>
+        <% if !trip.r_remb_amt.blank? and !trip.f_remb_amt.blank? then %>
+            <td>
+              <div class="action"><p>Reimbursed </p> <%= link_to 'Edit', edit_trip_path(trip) %></div>
+            </td>
+        <% else %>
+            <td>
+              <div class="action"><input name="id" id="<%= trip.id %>" data-disable_with = "Please wait..." receiver="" target="_blank" type="submit" value="Submit" onclick="on_submit_click(<%= trip.id%>);"></div>
+            </td>
+        <% end %>
+        <td><a  href="#"  id ="dialog_<%=trip.id%>" onclick = "show_on_click(<%= trip.id %>);">Show</a> </td>
 
-<% @trips.each do |trip| %>
-  <tr>
-    <td><%= trip.pid %></td>
-    <td><%= trip.f_remb_eligible %></td>
-    <td><%= trip.f_reason %></td>
-    <td><%= trip.f_max_remb %></td>
-    <td><%= trip.f_remb_amt %></td>
-    <td><%= trip.r_remb_eligible %></td>
-    <td><%= trip.r_reason %></td>
-    <td><%= trip.r_max_remb %></td>
-    <td><%= trip.r_remb_amt %></td>
-    <td><%= link_to 'Show', trip %></td>
-    <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
-    <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+      </tr>
+  <% end %>
+  </tbody>
 </table>
-
-<br />
+<div id="dialog-message" class=""></div>
+<br/>
 
 <%= link_to 'New Trip', new_trip_path %>

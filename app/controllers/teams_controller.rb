@@ -1,6 +1,9 @@
 class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
+
+  before_filter :authenticate_admin!
+
   def index
     @teams = Team.all
 
@@ -88,7 +91,9 @@ class TeamsController < ApplicationController
 
     if params[:receiver_name] == "" then
       render :json => {:id => params[:id], :status => 'false', :message => 'Please enter the Receiver Name'}
-         else
+    elsif @team.receiver.blank? then
+      render :json => {:id => params[:id], :status => 'false', :message => 'Already distributed'}
+    else
       @team.update_attribute(:receiver,params[:receiver_name])
       render :json => {:id => params[:id], :status => 'true', :message => 'Accepted', :receiver => params[:receiver_name]}
 

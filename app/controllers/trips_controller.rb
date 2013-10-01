@@ -1,6 +1,9 @@
 class TripsController < ApplicationController
   # GET /trips
   # GET /trips.json
+
+  before_filter :authenticate_admin!
+
   def index
     @trips = Trip.all
 
@@ -15,10 +18,14 @@ class TripsController < ApplicationController
   def show
     @trip = Trip.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @trip }
-    end
+    render :partial => 'trips/show'
+    #page.replace_html 'dialog-message' ,:partial => 'trips/show'
+    #respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.js
+    #  on { render :partial => 'trips/show' }
+    #
+    #end
   end
 
   # GET /trips/new
@@ -79,5 +86,30 @@ class TripsController < ApplicationController
       format.html { redirect_to trips_url }
       format.json { head :no_content }
     end
+  end
+
+  def reimburse
+
+    @trip = Trip.find_by_pid(params[:id])
+
+    if params[:f_amt] == "" or params[:r_amt] == "" then
+      render :json => {:id => params[:id], :status => 'false', :message => 'Please enter both - Forward amount and Reverse amount'}
+    else
+      if !(params[:f_amt].to_i.to_s ==  params[:f_amt]) or !(params[:r_amt].to_i.to_s ==  params[:r_amt]) then
+        render :json => {:id => params[:id], :status => 'false', :message => 'Please enter an integer amount'}
+
+      elsif      @trip.f_remb_amt.nil? and @trip.r_remb_amt.nil? then
+
+      @trip.f_remb_amt = params[:f_amt]
+      @trip.r_remb_amt = params[:r_amt]
+      @trip.save
+      render :json => {:id => params[:id], :status => 'true', :message => 'Reimbursed', :f_amt => params[:f_amt], :r_amt => params[:r_amt]}
+      else
+        render :json => {:id => params[:id], :status => 'reimbursed', :message => 'Already Reimbursed', :f_amt => @trip.f_remb_amt, :r_amt => @trip.r_remb_amt}
+      end
+
+
+    end
+
   end
 end
